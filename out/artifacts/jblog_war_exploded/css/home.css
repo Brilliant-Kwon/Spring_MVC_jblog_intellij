@@ -1,0 +1,23 @@
+@charset "UTF-8";
+div#wrapper {
+    text-align: center;
+    padding: 50px 30px
+}
+
+input[type="text"] {
+    height: auto;
+    line-height: normal;
+    padding: .8em .5em;
+    border: 1px solid #47a2cc;
+    border-radius: 0; /* iSO 둥근모서리 제거 */
+
+}
+
+input[type="submit"] {
+    padding: 5px 15px;
+    background: #47a2cc;
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}

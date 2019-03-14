@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+    <!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+    <!--xmlns:context="http://www.springframework.org/schema/context"-->
+    <!--xmlns:mvc="http://www.springframework.org/schema/mvc"-->
+    <!--xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd-->
+    <!--http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd-->
+    <!--http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">-->
+
+    <!-- Process annotations on registered beans like @Autowired... -->
+    <context:annotation-config/>
+    <!-- 컴포넌트 스캔 -->
+    <!--어노테이션 기반 자동 Bean 등록-->
+    <context:component-scan base-package="jblog.controller"/>
+
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/WEB-INF/views/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!-- Multipart Resolver -->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!--업로드 최대 바이트 크기-->
+        <property name="maxUploadSize" value="10485760"/>
+        <!--인코딩-->
+        <property name="defaultEncoding" value="utf-8"/>
+    </bean>
+
+    <!--&lt;!&ndash;Resource Mapping&ndash;&gt;-->
+    <!--<mvc:resources mapping="/upload-images/**" location="file:/upload/" />-->
+
+    <!--&lt;!&ndash;Interceptors&ndash;&gt;-->
+    <!--<mvc:interceptors>-->
+        <!--<mvc:interceptor>-->
+            <!--<mvc:mapping path="/board/**"/>-->
+            <!--<mvc:exclude-mapping path="/board/list/**"/>-->
+            <!--<mvc:exclude-mapping path="/board/"/>-->
+            <!--<mvc:exclude-mapping path="/board"/>-->
+            <!--<bean class="myportal.interceptor.AuthInterceptor" />-->
+            <!--&lt;!&ndash;board/list는 통과시키기&ndash;&gt;-->
+        <!--</mvc:interceptor>-->
+    <!--</mvc:interceptors>-->
+
+
+
+    <!--Bean 수동 등록-->
+    <!--<bean id="naController" class="myportal.controller.NonAnnotationController"/>-->
+    <!--<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">-->
+    <!--<property name="mappings">-->
+    <!--<props>-->
+    <!--<prop key="/na">naController</prop>-->
+    <!--</props>-->
+    <!--</property>-->
+    <!--</bean>-->
+
+    <!-- This tag registers the DefaultAnnotationHandlerMapping and
+         AnnotationMethodHandlerAdapter beans that are required for Spring MVC  -->
+    <!--정적자원 DefaultServlet 위임-->
+    <mvc:annotation-driven>
+        <!--메시지 컨버터 등록-->
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                <property name="supportedMediaTypes">
+                    <list>
+                        <value>application/json; charset=UTF-8</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <!-- This tag allows for mapping the DispatcherServlet to "/" -->
+    <mvc:default-servlet-handler/>
+
+
+</beans>

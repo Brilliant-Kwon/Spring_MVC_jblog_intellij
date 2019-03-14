@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+ul, ol {
+    list-style-type: none
+}
+
+div#header h1 {
+    height: 70px;
+    line-height: 70px;
+    margin: 0;
+    padding-left: 10px;
+    color: #79B30B
+}
+
+div#header ul {
+    width: 126px;
+    height: 20px;
+    margin: 0 auto;
+    padding: 20px 0 0 20px;
+}
+
+div#header li {
+    float: right
+}
+
+div#header li a {
+    color: #4F4F4F;
+    font-weight: bold;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+div#footer {
+    background: #f3f3f3;
+    color: #303841;
+    text-align: center;
+}
+
+div#footer p {
+    margin: 0;
+    padding: 5px 10px
+}
+
+#user		{ margin:20px auto;	width:540px; }
+#join-form	{
+    width:250px;
+    padding:10px;
+    border:1px solid #666;
+    border-radius: 10px;
+    margin:50px auto;
+}
+
+label.block-label					{ display:block }
+label.block-label, fieldset			{ margin:5px 0 3px 0 }
+label.block-label, fieldset legend	{ margin-bottom:3px }
+
+fieldset				{ border:none }
+input[type="submit"]	{ display:block; width:80px; margin:20px auto }
+
+#login-form	{
+    width:180px;
+    padding:10px;
+    border:1px solid #666;
+    border-radius: 10px;
+    margin:50px auto;
+}
+
+#user p		{ text-align:center; padding:10px}
+
+#user p.jr-success	{ height:200px }
