@@ -1,7 +1,11 @@
 package jblog.controller;
 
 import jblog.exception.UserDaoException;
+import jblog.service.BlogService;
+import jblog.service.CateService;
 import jblog.service.UserService;
+import jblog.vo.BlogVo;
+import jblog.vo.CategoryVo;
 import jblog.vo.UserVo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,20 +14,24 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RequestMapping("/users")
 @Controller
 public class UsersController {
     @Autowired
     UserService userServiceImpl;
+    @Autowired
+    BlogService blogServiceImpl;
+    @Autowired
+    CateService cateServiceImpl;
+
     private static final Logger logger = LoggerFactory.getLogger(UsersController.class);
 
     //회원가입 관련
@@ -63,9 +71,33 @@ public class UsersController {
         }
 
         System.out.println("가입 결과 : " + success);
-        if (success)
+        if (success) {//성공했으면
+            BlogVo blogVo = new BlogVo();//블로그 vo 만들고
+            UserVo userVo = userServiceImpl.getUser(vo.getId()); //성공한 아이디를 가져와서
+            //userNo를 blogVo에 붙여야함
+            blogVo.setUserNo(userVo.getUserNo());
+            blogVo.setBlogTitle(userVo.getUserName() + "의 블로그 입니다.");
+            boolean blogSuccess = blogServiceImpl.create(blogVo);
+            if (blogSuccess) {
+                System.out.println("블로그 생성 성공");
+            } else {
+                System.out.println("블로그 생성 실패");
+            }
+
+            CategoryVo cateVo = new CategoryVo();
+            cateVo.setUserNo(userVo.getUserNo());
+            cateVo.setCateName("미분류");
+            cateVo.setDescription("미분류");
+
+            boolean cateSuccess = cateServiceImpl.createDefault(cateVo);
+            if (cateSuccess) {
+                System.out.println("미분류 카테고리 생성 성공");
+            } else {
+                System.out.println("미분류 카테고리 생성 실패");
+            }
+
             return "redirect:/users/joinsuccess";
-        else
+        } else
             return "redirect:/users/join";
     }
 
@@ -76,19 +108,34 @@ public class UsersController {
 
     //로그인 관련
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String loginform() {
+    public String loginform(@ModelAttribute UserVo vo) {
         return "users/loginform";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String loginAction(@RequestParam(value = "id", required = false) String id, @RequestParam(value = "password", required = false) String password, HttpSession session) {
-        System.out.println(id + ", " + password);
-        if (id.length() == 0 || password.length() == 0) {
+    public String loginAction(@ModelAttribute UserVo vo, BindingResult result, Model model, HttpSession session) {
+        System.out.println("로그인 시작");
+        System.out.println(vo.getId() + ", " + vo.getPassword());
+
+        System.out.println(result.hasErrors());
+        //오류 체크
+//        if (result.hasErrors()) {
+//            //검증 실패
+//            List<ObjectError> errors = result.getAllErrors(); // 모든 에러 가져옴
+//            for (ObjectError e : errors) {
+//                logger.error("ERROR:" + e);
+//            }
+//            model.addAllAttributes(result.getModel());
+//            return "users/loginform";
+//        }
+
+        if (vo.getId().length() == 0 || vo.getPassword().length() == 0) {
             System.err.println("입력값이 없습니다.");
             return "redirect:/users/login";
         } else {
-            System.out.println("로그인 시작");
-            UserVo authUser = userServiceImpl.getUser(id, password);
+            System.out.println("FORM:" + vo);
+
+            UserVo authUser = userServiceImpl.getUser(vo.getId(), vo.getPassword());
             System.out.println(authUser.toString());
             //사용자가 있다면 session에 authUser 적재
             if (authUser != null) {
@@ -103,4 +150,30 @@ public class UsersController {
 
     }
 
+    //로그아웃
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public String logout(HttpSession session) {
+        //로그인 정보 삭제
+        session.removeAttribute("authUser");
+        //세션 무효화
+        session.invalidate();
+        return "redirect:/";
+    }
+
+    //중복 아이디 체크
+    @ResponseBody
+    @RequestMapping(value = "/idcheck", method = RequestMethod.GET)
+    public Object exist(@RequestParam(value = "id", required = true, defaultValue = "") String id) {
+        System.out.println("중복체크 매핑");
+        System.out.println("id : " + id);
+
+        UserVo vo = userServiceImpl.getUser(id);
+        System.out.println("vo:" + vo);
+        Map<String, Object> map = new HashMap<>();
+        map.put("result", "success");
+        map.put("data", vo != null ? "exist" : "not exist");
+        System.out.println("data: " + map.get("data"));
+
+        return map;
+    }
 }

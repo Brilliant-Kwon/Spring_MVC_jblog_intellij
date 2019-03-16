@@ -9,7 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div id="header" align="center">
     <a href="${pageContext.servletContext.contextPath }/main"><img height="200px" src="http://cslin.skuniv.ac.kr/~kwonchk1004/images/logo.png" ></a>
-    <ul style="height:20px; margin:0 20px 10px 0">
+    <ul>
         <%--로그인 된 경우의 메뉴--%>
         <%--
         <li><a href="<%=request.getContextPath() %>/users?a=logout">로그아웃</a></li>
@@ -19,8 +19,8 @@
         <c:choose>
             <c:when test="${authUser ne null}">
                 <%--<c:otherwise>--%>
+                <li><a href="${pageContext.servletContext.contextPath }/${authUser.id}">내 블로그</a></li>
                 <li><a href="${pageContext.servletContext.contextPath }/users/logout">로그아웃</a></li>
-                <li>${authUser.name}님 안녕하세요.</li>
                 <%--</c:otherwise>--%>
             </c:when>
 

@@ -4,6 +4,10 @@ ul, ol {
     list-style-type: none
 }
 
+div#header {
+    width: 500px;
+}
+
 div#header h1 {
     height: 70px;
     line-height: 70px;
@@ -13,14 +17,16 @@ div#header h1 {
 }
 
 div#header ul {
-    width: 126px;
+    width: 500px;
     height: 20px;
     margin: 0 auto;
-    padding: 20px 0 0 20px;
+    padding: 20px 0 0 0;
+    text-align: center;
 }
 
 div#header li {
-    float: right
+    width: auto;
+    display: inline;
 }
 
 div#header li a {

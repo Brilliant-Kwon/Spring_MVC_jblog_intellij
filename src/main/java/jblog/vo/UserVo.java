@@ -8,7 +8,6 @@ public class UserVo {
     private Long userNo; //pk
     @NotEmpty
     private String id; //unique
-    @NotEmpty
     private String userName;
     @NotEmpty
     private String password;

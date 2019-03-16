@@ -5,17 +5,21 @@
 <configuration>
     <!--객체 별칭 지정-->
     <typeAliases>
-        <!--<typeAlias alias="guestbookVo"-->
-                   <!--type="myportal.vo.GuestbookVo"/>-->
         <typeAlias alias="userVo"
                    type="jblog.vo.UserVo"/>
-        <!--<typeAlias alias="boardVo"-->
-                   <!--type="myportal.vo.BoardVo"/>-->
+        <typeAlias alias="blogVo"
+                   type="jblog.vo.BlogVo"/>
+        <typeAlias alias="cateVo"
+                   type="jblog.vo.CategoryVo"/>
+        <typeAlias alias="postVo"
+                   type="jblog.vo.PostVo"/>
+        <typeAlias alias="commentVo"
+                   type="jblog.vo.CommentVo"/>
     </typeAliases>
 
     <mappers>
-        <!--<mapper resource="mybatis/mappers/guestbook.xml"/>-->
         <mapper resource="mybatis/mappers/users.xml"/>
-        <!--<mapper resource="mybatis/mappers/board.xml"/>-->
+        <mapper resource="mybatis/mappers/blog.xml"/>
+        <mapper resource="mybatis/mappers/cate.xml"/>
     </mappers>
 </configuration>

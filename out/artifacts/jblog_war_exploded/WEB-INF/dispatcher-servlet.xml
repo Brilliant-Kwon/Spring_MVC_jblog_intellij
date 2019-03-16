@@ -37,6 +37,9 @@
         <!--인코딩-->
         <property name="defaultEncoding" value="utf-8"/>
     </bean>
+    
+    <mvc:resources mapping="/css/**" location="/css/"/>
+    <mvc:resources mapping="/javascript/**" location="/javascript/"/>
 
     <!--&lt;!&ndash;Resource Mapping&ndash;&gt;-->
     <!--<mvc:resources mapping="/upload-images/**" location="file:/upload/" />-->

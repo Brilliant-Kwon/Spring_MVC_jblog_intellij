@@ -8,7 +8,6 @@
   Time: 오후 1:24
   To change this template use File | Settings | File Templates.
 --%>
-<%--todo : 중복체크 버튼 alert 말고 화면에 뜨게 하기--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -16,6 +15,16 @@
     <link type="text/css"
           rel="stylesheet"
           href="<%= request.getContextPath() %>/css/header_footer.css"/>
+    <style type="text/css">
+        div#user {
+            padding: 0 auto;
+        }
+        div#user form {
+            border:1px solid #666;
+            border-radius: 10px;
+            padding-left: 120px;
+        }
+    </style>
     <script type="text/javascript"
             src="${pageContext.servletContext.contextPath }/javascript/jquery/jquery-1.9.0.js"></script>
     <script type="text/javascript">
@@ -42,7 +51,7 @@
         function checkId(btn) {
             //   아이디 필드 체크
             if (btn.form.id.value.trim().length == 0) { // 만약 btn이 소속된 form에서 email이란 이름을 가진 객체의 value 값이 공백을 제거하고 난 뒤 길이가
-                alert("이메일을 입력해주세요.") // 0과 같다면 입력이 되지 않은 상태이므로 alert를 띄운다
+                alert("아이디를 입력해주세요.");// 0과 같다면 입력이 되지 않은 상태이므로 alert를 띄운다
                 return;
             }
             //   JQuery Ajax 수행
@@ -51,7 +60,7 @@
                 type: "get", // 메소드 수행 방식
                 dataType: "json", // 넘겨받을 데이터 타입
                 data: {
-                    email: btn.form.id.value
+                    id: btn.form.id.value
                 },
                 success: function (response) { // 응답값: response HashMap 형태로 넘긴 그것
                     if (response.data == "exist") {
@@ -74,8 +83,9 @@
     <jsp:include page="../includes/header.jsp"/>
     <%--NAVIGATION영역--%>
     <%--<jsp:include page="includes/navigation.jsp"/>--%>
-    <div id="wrapper">
-        <div id="content">
+    <div id="wrapper" align="center">
+        <div id="content" align="left" >
+            <div id="user">
             <form:form modelAttribute="userVo" method="post"
                        action="${pageContext.servletContext.contextPath}/users/join" onsubmit="checked(this)">
 
@@ -116,6 +126,7 @@
                 <input type="submit" value="회원가입">
 
             </form:form>
+            </div>
         </div>
     </div>
 

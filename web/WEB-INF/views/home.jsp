@@ -12,10 +12,10 @@
     <title>jBlog</title>
     <link type="text/css"
           rel="stylesheet"
-          href="<%= request.getContextPath() %>/css/header_footer.css"/>
+          href="${pageContext.servletContext.contextPath }/css/header_footer.css"/>
     <link type="text/css"
           rel="stylesheet"
-          href="<%= request.getContextPath() %>/css/home.css"/>
+          href="${pageContext.servletContext.contextPath }/css/home.css"/>
 </head>
 <body>
 <div id="container">
