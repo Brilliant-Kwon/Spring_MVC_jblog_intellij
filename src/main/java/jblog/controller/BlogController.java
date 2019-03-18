@@ -1,19 +1,16 @@
 package jblog.controller;
 
-import jblog.service.BlogService;
-import jblog.service.CateService;
-import jblog.service.PostService;
-import jblog.service.UserService;
+import jblog.service.*;
 import jblog.vo.BlogVo;
 import jblog.vo.CategoryVo;
 import jblog.vo.PostVo;
 import jblog.vo.UserVo;
+import org.omg.CORBA.PUBLIC_MEMBER;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
@@ -31,6 +28,8 @@ public class BlogController {
     CateService cateServiceImpl;
     @Autowired
     PostService postServiceImpl;
+    @Autowired
+    FileUploadService fileUploadService;
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String myBlog(@PathVariable("id") String id, HttpSession session) {
@@ -109,16 +108,38 @@ public class BlogController {
                 count++;
             }
             map.put(cateList.get(i).getCateNo(), count);
-            count=0;
+            count = 0;
         }
 
         System.out.println("map : " + map);
         if (session.getAttribute("postCount") != null) {
-            session.setAttribute("postCount",map);
+            session.removeAttribute("postCount");
+        }
+        session.setAttribute("postCount", map);
+
+        return "blog/admin_category";
+    }
+
+    @RequestMapping(value = {"/{id}/admin/category"}, method = RequestMethod.POST)
+    public String writeCate(@PathVariable("id") String id, @ModelAttribute CategoryVo cateVo, HttpSession session) {
+        System.out.println("카테고리 작성");
+        System.out.println("id: " + id);
+        UserVo userVo = userServiceImpl.getUser(id);
+
+        System.out.println("받아온 form : " + cateVo);
+        cateVo.setUserNo(userVo.getUserNo());
+        System.out.println("유저넘버 추가 : " + cateVo);
+
+        boolean success = cateServiceImpl.createDefault(cateVo);
+        if (success) {
+            System.out.println("카테고리 추가 성공");
+            return "redirect:/" + id;
+        } else {
+            System.out.println("카테고리 추가 실패");
+            return "blog/admin_category";
         }
 
 
-        return "blog/admin_category";
     }
 
     @RequestMapping(value = {"/{id}/admin/write"}, method = RequestMethod.GET)
@@ -152,4 +173,38 @@ public class BlogController {
         }
 
     }
+
+    @RequestMapping(value = "/{id}/admin/upload", method = RequestMethod.POST)
+    public String logoUpload(@PathVariable("id") String id, @RequestParam("title") String title, @RequestParam("logo_File") MultipartFile mFile, Model model) {
+        if (mFile != null) {
+            String saveFilename = fileUploadService.store(mFile);
+            //Image URL 생성
+            String url = "upload-images/" + saveFilename;
+
+            System.out.println("이미지 저장 : " + url);
+            model.addAttribute("urlImage", url);
+
+            UserVo userVo = userServiceImpl.getUser(id);
+            BlogVo blogVo = blogServiceImpl.getBlog(userVo);
+            blogVo.setBlogTitle(title);
+            blogVo.setLogoFile(url);
+
+            boolean success = blogServiceImpl.modify(blogVo);
+            if (success) {
+                System.out.println("블로그 수정 완료");
+                return "redirect:/" + id;
+            } else {
+                System.out.println("블로그 수정 실패");
+                return "blog/admin";
+            }
+
+
+        } else {
+            System.out.println("파일 선택 없음");
+
+            return "blog/admin";
+        }
+
+    }
+
 }

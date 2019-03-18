@@ -31,7 +31,7 @@
                         <td class="label">제목</td>
                         <td><input type="text" name="postTitle" value=""></td>
                         <td><select name="cateNo">
-                            <c:forEach items="${cateList}" var="cateVo"items="${cateList}" var="cateVo">
+                            <c:forEach items="${cateList}" var="cateVo">
                                 <option value="${cateVo.cateNo}">${cateVo.cateName}</option>
                             </c:forEach>
                         </select></td>
@@ -44,7 +44,7 @@
                     </tr>
                 </table>
                 <div class="bottom">
-                    <input type="submit" value="포스트 하기">
+                    <input type="submit" value="포스트 하기" style="width: 150px">
                 </div>
             </form>
 

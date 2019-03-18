@@ -14,7 +14,5 @@ public interface BlogDao {
 
     public int insert(BlogVo vo);//블로그 생성
 
-    public int update(BlogVo vo);//블로그 타이틀 변경
-
-    // TODO: 2019-03-15 : 블로그 로고 변경
+    public int update(BlogVo vo);//블로그 수정
 }

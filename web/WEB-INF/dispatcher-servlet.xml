@@ -41,8 +41,8 @@
     <mvc:resources mapping="/css/**" location="/css/"/>
     <mvc:resources mapping="/javascript/**" location="/javascript/"/>
 
-    <!--&lt;!&ndash;Resource Mapping&ndash;&gt;-->
-    <!--<mvc:resources mapping="/upload-images/**" location="file:/upload/" />-->
+    <!--Resource Mapping-->
+    <mvc:resources mapping="/upload-images/**" location="file:/upload/" />
 
     <!--&lt;!&ndash;Interceptors&ndash;&gt;-->
     <!--<mvc:interceptors>-->

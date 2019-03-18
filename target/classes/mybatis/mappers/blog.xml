@@ -25,6 +25,12 @@
 
         ]]>
     </insert>
+
+    <update id="update" parameterType="blogVo">
+        <![CDATA[
+    update blog set blogTitle = #{blogTitle}, logoFile = #{logoFile} where userNo=#{userNo}
+]]>
+    </update>
     
 
 </mapper>

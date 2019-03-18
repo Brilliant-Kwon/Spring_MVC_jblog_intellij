@@ -9,9 +9,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <c:set var="authUser" scope="session" value="${sessionScope.authUser}"/>
 <c:set var="cateList" scope="session" value="${sessionScope.cateList}"/>
+<c:set var="blogVo" scope="session" value="${sessionScope.blogVo}"/>
 <div id="navigation">
     <ul>
-        <li><a href="<%= request.getContextPath() %>/${authUser.id}">로고가 들어갈 곳</a></li>
+        <li><a href="<%= request.getContextPath() %>/${authUser.id}">
+            <img src="<%= request.getContextPath()%>/${blogVo.logoFile}" alt="logo" style="width: 150px"/>
+        </a></li>
         <li><a href="<%= request.getContextPath() %>/${authUser.id}">카테고리</a></li>
         <c:forEach items="${cateList}" var="cateVo">
             <li><a href="<%= request.getContextPath() %>/${authUser.id}">${cateVo.cateName}</a></li>
