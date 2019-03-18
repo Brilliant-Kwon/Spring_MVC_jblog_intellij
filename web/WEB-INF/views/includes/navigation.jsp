@@ -17,7 +17,7 @@
         </a></li>
         <li><a href="<%= request.getContextPath() %>/${authUser.id}">카테고리</a></li>
         <c:forEach items="${cateList}" var="cateVo">
-            <li><a href="<%= request.getContextPath() %>/${authUser.id}">${cateVo.cateName}</a></li>
+            <li><a href="<%= request.getContextPath() %>/${authUser.id}/${cateVo.cateNo}">${cateVo.cateName}</a></li>
         </c:forEach>
     </ul>
 </div>
