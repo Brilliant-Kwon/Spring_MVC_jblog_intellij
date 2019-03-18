@@ -8,4 +8,10 @@
 ]]>
 </insert>
 
+    <select id="selectAll" resultType="cateVo" parameterType="userVo">
+        <![CDATA[
+      SELECT * FROM category WHERE userNo=#{userNo}
+]]>
+    </select>
+
 </mapper>

@@ -7,6 +7,11 @@
     insert into category values (seq_category_no.nextval, #{userNo}, #{cateName}, #{description}, sysdate)
 ]]>
 </insert>
-    
+
+    <select id="selectAll" resultType="cateVo" parameterType="userVo">
+        <![CDATA[
+      SELECT * FROM category WHERE userNo=#{userNo}
+]]>
+    </select>
 
 </mapper>

@@ -16,6 +16,8 @@
           href="<%= request.getContextPath() %>/css/header_footer.css"/>
 </head>
 <body>
+<c:set var="wholePost" scope="session" value="${sessionScope.wholePost}"/>
+<c:set var="cateList" scope="session" value="${sessionScope.cateList}"/>
 <div id="container">
     <%--HEADER영역--%>
     <jsp:include page="../includes/header_blog.jsp"/>
@@ -23,7 +25,38 @@
     <jsp:include page="../includes/navigation.jsp"/>
     <div id="wrapper">
         <div id="content">
+            <table id="post">
+                <tr>
+                    <th>번호</th>
+                    <th>카테고리</th>
+                    <th>제목</th>
+                    <th>내용</th>
+                    <th>작성일</th>
+                </tr>
 
+                <c:choose>
+                    <c:when test="${not empty wholePost}">
+                        <c:forEach items="${wholePost}" var="postVo">
+                            <tr>
+                                <td>${postVo.postNo}</td>
+                                <c:forEach items="${cateList}" var="cateVo">
+                                    <c:if test="${cateVo.cateNo eq postVo.cateNo}">
+                                        <td>${cateVo.cateName}</td>
+                                    </c:if>
+                                </c:forEach>
+                                <td>${postVo.postTitle}</td>
+                                <td>${postVo.postContent}</td>
+                                <td>${postVo.regDate}</td>
+                            </tr>
+                        </c:forEach>
+                    </c:when>
+                    <c:otherwise>
+                        <tr>
+                            <td colspan="5">등록된 글이 없습니다.</td>
+                        </tr>
+                    </c:otherwise>
+                </c:choose>
+            </table>
         </div>
     </div>
     <jsp:include page="../includes/footer.jsp"/>

@@ -32,7 +32,9 @@
             var userName = obj.userName.value;
             var password = obj.password.value;
             var id = obj.id.value;
-            var check = obj.check.value;
+            var check = obj.check;
+            // var checkResult = check.getAttribute("checked");
+            var checkResult = $(check).prop("checked");
 
             if (userName.trim().length == 0) {
                 alert("이름을 입력해주세요.");
@@ -40,7 +42,7 @@
                 alert("아이디를 입력해주세요.");
             } else if (password.trim().length == 0) {
                 alert("비밀번호을 입력해주세요.");
-            } else if (check == false) {
+            } else if (checkResult == false) {
                 alert("약관에 동의해주세요.");
             } else {
                 return true;

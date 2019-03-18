@@ -18,7 +18,7 @@
           href="${pageContext.servletContext.contextPath }/css/home.css"/>
 </head>
 <body>
-<div id="container">
+<div id="container" align="center">
     <%--HEADER영역--%>
     <jsp:include page="includes/header.jsp"/>
     <%--NAVIGATION영역--%>

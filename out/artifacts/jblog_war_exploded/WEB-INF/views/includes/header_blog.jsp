@@ -21,16 +21,16 @@
         <c:choose>
             <c:when test="${authUser.userNo eq blogVo.userNo}">
                 <%--<c:otherwise>--%>
-                <li><a href="${pageContext.servletContext.contextPath }/admin/basic">내블로그 관리</a></li>
+                <li><a href="${pageContext.servletContext.contextPath }/${authUser.id}/admin/basic">내블로그 관리</a></li>
                 <li><a href="${pageContext.servletContext.contextPath }/users/logout">로그아웃</a></li>
                 <%--</c:otherwise>--%>
             </c:when>
 
-            <c:when test="${authUser.userNo ne blogVo.userNo}">
+            <c:when test="${authUser.userNo ne blogVo.userNo && authUser ne null}">
                 <li><a href="${pageContext.servletContext.contextPath }/users/logout">로그아웃</a></li>
             </c:when>
 
-            <c:when test="${empty authUser}">
+            <c:when test="${empty authUser || authUser eq null}">
                 <%--로그인 안 된 경우의 메뉴--%>
                 <li><a href="${pageContext.servletContext.contextPath }/users/join">회원가입</a></li>
                 <li><a href="${pageContext.servletContext.contextPath }/users/login">로그인</a></li>
