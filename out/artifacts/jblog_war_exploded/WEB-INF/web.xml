@@ -66,6 +66,18 @@
         <param-value>/WEB-INF/applicationContext.xml</param-value>
     </context-param>
 
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/css/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/javascript/*</url-pattern>
+    </servlet-mapping>
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>default</servlet-name>-->
+        <!--<url-pattern>file:/upload/</url-pattern>-->
+    <!--</servlet-mapping>-->
     <!-- dispatcher config -->
     <servlet>
         <servlet-name>dispatcher</servlet-name>

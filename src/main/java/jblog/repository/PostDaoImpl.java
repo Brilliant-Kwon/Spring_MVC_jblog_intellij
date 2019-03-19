@@ -22,4 +22,9 @@ public class PostDaoImpl implements PostDao {
     public int insert(PostVo vo) {
         return sqlSession.insert("post.insert", vo);
     }
+
+    @Override
+    public PostVo selectbyNo(Long postNo) {
+        return sqlSession.selectOne("post.selectbyNo", postNo);
+    }
 }

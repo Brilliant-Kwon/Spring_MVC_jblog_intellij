@@ -17,7 +17,7 @@
         --%>
         <c:set var="authUser" scope="session" value="${sessionScope.authUser}"/>
         <c:choose>
-            <c:when test="${authUser ne null}">
+            <c:when test="${not empty authUser}">
                 <%--<c:otherwise>--%>
                 <li><a href="${pageContext.servletContext.contextPath }/${authUser.id}">내 블로그</a></li>
                 <li><a href="${pageContext.servletContext.contextPath }/users/logout">로그아웃</a></li>

@@ -30,14 +30,11 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public UserVo selectUser(String id) {
-        System.out.println("다오 아이디 체크");
-        System.out.println(id);
         return sqlSession.selectOne("users.check", id);
     }
 
     @Override
     public UserVo selectUser(String id, String password) {
-        System.out.println("다오");
         Map map = new HashMap();
         map.put("id", id);
         map.put("password", password);

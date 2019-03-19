@@ -9,4 +9,6 @@ public interface PostDao {
     public List<PostVo> selectAll(CategoryVo vo);
 
     public int insert(PostVo vo);
+
+    public PostVo selectbyNo(Long postNo);
 }

@@ -22,6 +22,12 @@
     <!--어노테이션 기반 자동 Bean 등록-->
     <context:component-scan base-package="jblog.controller"/>
 
+    <mvc:resources mapping="/css/**" location="/css/"/>
+    <mvc:resources mapping="/javascript/**" location="/javascript/"/>
+
+    <!--Resource Mapping-->
+    <mvc:resources mapping="/upload-images/**" location="file:/upload/" />
+
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
@@ -37,12 +43,6 @@
         <!--인코딩-->
         <property name="defaultEncoding" value="utf-8"/>
     </bean>
-    
-    <mvc:resources mapping="/css/**" location="/css/"/>
-    <mvc:resources mapping="/javascript/**" location="/javascript/"/>
-
-    <!--Resource Mapping-->
-    <mvc:resources mapping="/upload-images/**" location="file:/upload/" />
 
     <!--&lt;!&ndash;Interceptors&ndash;&gt;-->
     <!--<mvc:interceptors>-->
@@ -86,6 +86,9 @@
 
     <!-- This tag allows for mapping the DispatcherServlet to "/" -->
     <mvc:default-servlet-handler/>
+
+
+
 
 
 </beans>

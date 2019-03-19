@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class MainController {
     @RequestMapping({"/", "/main"})
     public String main() {
+        System.out.println("메인입니다.");
         return "home";
     }
 

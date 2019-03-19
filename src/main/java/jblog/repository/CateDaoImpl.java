@@ -22,4 +22,9 @@ public class CateDaoImpl implements CateDao {
     public List<CategoryVo> selectAll(UserVo vo) {
         return sqlSession.selectList("cate.selectAll", vo);
     }
+
+    @Override
+    public CategoryVo selectbyNo(Long CateNo) {
+        return sqlSession.selectOne("cate.selectbyNo",CateNo);
+    }
 }

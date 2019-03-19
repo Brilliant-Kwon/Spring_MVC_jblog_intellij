@@ -1,3 +1,4 @@
+<%@ page import="jblog.vo.BlogVo" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
@@ -33,7 +34,10 @@
                     </tr>
                     <tr>
                         <td>로고 이미지</td>
-                        <td><img src="${pageContext.servletContext.contextPath }/${blogVo.logoFile }" alt="현재 로고" style="width: 150px"></td>
+                        <%
+                            BlogVo blogVo = (BlogVo) request.getAttribute("blogVo");
+                        %>
+                        <td><img src="<%= request.getContextPath()%>/<%=blogVo.getLogoFile()%>" alt="현재 로고" style="width: 150px"></td>
                     </tr>
                     <tr>
                         <td colspan="2"><input type="file" name="logo_File"></td>

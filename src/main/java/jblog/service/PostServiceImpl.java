@@ -20,6 +20,11 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public boolean write(PostVo vo) {
-        return postDaoImpl.insert(vo)==1;
+        return postDaoImpl.insert(vo) == 1;
+    }
+
+    @Override
+    public PostVo getPost(Long postNo) {
+        return postDaoImpl.selectbyNo(postNo);
     }
 }

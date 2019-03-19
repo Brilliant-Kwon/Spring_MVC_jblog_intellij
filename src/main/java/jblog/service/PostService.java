@@ -9,4 +9,6 @@ public interface PostService {
     public List<PostVo> getList(CategoryVo vo);
 
     public boolean write(PostVo vo);
+
+    public PostVo getPost(Long postNo);
 }

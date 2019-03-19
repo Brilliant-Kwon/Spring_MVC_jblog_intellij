@@ -16,6 +16,11 @@
 
         ]]>
     </insert>
-    
+
+    <select id="selectbyNo" parameterType="Long" resultType="postVo">
+        <![CDATA[
+          SELECT * FROM post where postNo = #{postNo}
+]]>
+    </select>
 
 </mapper>

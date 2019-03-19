@@ -1,30 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="comment">
-    
-    <select id="selectAll" resultType="blogVo">
-        <![CDATA[
-          select * from blog
-]]>
-    </select>
 
-    <select id="select" resultType="blogVo" parameterType="userVo">
-        <![CDATA[
-        select * from blog where userNo=#{userNo}
-]]>
+    <insert id="insert" parameterType="commentVo">
+<![CDATA[
 
-    </select>
-    
-    <insert id="insert" parameterType="blogVo">
-        <![CDATA[
-
-                                           insert into blog values (
-                                           #{userNo},
-                                           #{blogTitle},
-                                            null)
+                        insert into comments values (seq_comments_no.nextval, #{postNo}, #{cmtContent}, sysdate, #{userNo})
 
         ]]>
     </insert>
-    
+
+    <select id="selectList" resultType="commentVo" parameterType="Long">
+        <![CDATA[
+
+                          select userName, cmtContent, regDate from comments c inner join users u on c.userNo = u.userNo where postNo=#{postNo}
+
+        ]]>
+    </select>
 
 </mapper>

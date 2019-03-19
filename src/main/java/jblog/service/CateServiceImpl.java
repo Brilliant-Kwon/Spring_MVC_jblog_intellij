@@ -22,4 +22,9 @@ public class CateServiceImpl implements CateService {
     public List<CategoryVo> getList(UserVo vo) {
         return cateDaoImpl.selectAll(vo);
     }
+
+    @Override
+    public CategoryVo getbyNo(Long cateNo) {
+        return cateDaoImpl.selectbyNo(cateNo);
+    }
 }

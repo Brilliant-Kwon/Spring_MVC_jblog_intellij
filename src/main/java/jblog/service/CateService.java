@@ -9,4 +9,6 @@ public interface CateService {
     public boolean createDefault(CategoryVo vo);
 
     public List<CategoryVo> getList(UserVo vo);
+
+    public CategoryVo getbyNo(Long cateNo);
 }

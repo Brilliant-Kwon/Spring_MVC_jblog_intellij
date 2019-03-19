@@ -20,7 +20,7 @@
 </head>
 <body>
 <c:set var="authUser" scope="session" value="${sessionScope.authUser}"/>
-<c:set var="cateList" scope="session" value="${sessionScope.cateList}"/>
+<%--<c:set var="cateList" scope="session" value="${sessionScope.cateList}"/>--%>
 <c:set var="postCount" scope="session" value="${sessionScope.postCount}"/>
 <div id="container">
     <%--HEADER영역--%>
@@ -44,7 +44,7 @@
                     <td>삭제</td>
                 </tr>
                 <%
-                    List<CategoryVo> list = (List<CategoryVo>) session.getAttribute("cateList");
+                    List<CategoryVo> list = (List<CategoryVo>) request.getAttribute("cateList");
                     Iterator iterator = list.iterator();
                     System.out.println(iterator.toString());
                 %>
