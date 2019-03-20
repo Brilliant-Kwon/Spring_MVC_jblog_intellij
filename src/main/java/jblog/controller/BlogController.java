@@ -119,6 +119,99 @@ public class BlogController {
         }
     }
 
+    @RequestMapping(value = "/{id}/whole", method = RequestMethod.GET)
+    public String myBlogWhole(@PathVariable("id") String id, HttpSession session, Model model) {
+        System.out.println("블로그 메인");
+        System.out.println("블로그 컨트롤러");
+        System.out.println("id: " + id);
+        UserVo userVo = userServiceImpl.getUser(id);
+        System.out.println("userVo : " + userVo.toString());
+        System.out.println("전체 오픈");
+
+//        if (session.getAttribute("blogUser") != null)
+//            session.removeAttribute("blogUser");
+//        session.setAttribute("blogUser", userVo);
+
+        model.addAttribute("blogUser", userVo);
+
+        BlogVo blogVo = blogServiceImpl.getBlog(userVo);
+        System.out.println("블로그 정보:" + blogVo.toString());
+        model.addAttribute("blogVo", blogVo);
+
+//        UserVo vo = (UserVo) session.getAttribute("authUser");
+
+//        if (session.getAttribute("blogVo") != null) {
+//            return "redirect:/";
+//        }
+//        if (session.getAttribute("blogVo") != null)
+//            session.removeAttribute("blogVo");
+//        session.setAttribute("blogVo", blogVo);
+//        System.out.println("세션에 블로그 정보 등록");
+
+        List<CategoryVo> cateList = cateServiceImpl.getList(userVo);
+        System.out.println("카테고리 리스트 : " + cateList);
+        model.addAttribute("cateList", cateList);
+
+//        if (session.getAttribute("cateList") != null)
+//            session.removeAttribute("cateList");
+//        session.setAttribute("cateList", cateList);
+
+        List<PostVo> wholePost = new ArrayList<>();
+        for (int i = 0; i < cateList.size(); i++) {
+            List<PostVo> postList = postServiceImpl.getList(cateList.get(i));
+            wholePost.addAll(postList); // 리스트에 리스트 추가
+        }
+
+        System.out.println("전체 포스트 : " + wholePost);
+        model.addAttribute("wholePost", wholePost);
+//        if (session.getAttribute("wholePost") != null)
+//            session.removeAttribute("wholePost");
+//        session.setAttribute("wholePost", wholePost);
+//
+//        Iterator<CategoryVo> cateIter = cateList.iterator();
+//        System.out.println("이터레이터 : " + cateIter);
+//        List<PostVo> basicPosts = postServiceImpl.getList(cateIter.next());
+
+        if (!wholePost.isEmpty()) {
+            System.out.println("전체 포스트 리스트 : " + wholePost);
+//            if (session.getAttribute("postList") != null)
+//                session.removeAttribute("postList");
+//            session.setAttribute("postList", basicPosts);
+            model.addAttribute("postList", wholePost);
+
+//        if (basicPosts.get(0) != null) {
+            System.out.println("전체 포스트의 첫번째 : " + wholePost.get(0));
+            model.addAttribute("postContent", wholePost.get(0));
+
+            List<CommentVo> commList = commentServiceImpl.getComments(wholePost.get(0).getPostNo());
+            if (!commList.isEmpty()) {
+                System.out.println("댓글 목록 : " + commList);
+                model.addAttribute("commentList", commList);
+            }else{
+                System.out.println("댓글 없음");
+            }
+//            if (session.getAttribute("postContent") != null)
+//                session.removeAttribute("postContent");
+//            session.setAttribute("postContent", basicPosts.get(0));
+        } else {//포스트 리스트가 비었으면
+            System.out.println("포스트가 없어");
+            PostVo postVo = new PostVo();
+            postVo.setPostTitle("제목이 없습니다.");
+            postVo.setPostContent("내용이 없습니다.");
+            model.addAttribute("postContent", postVo);
+
+//            if (session.getAttribute("postContent") != null)
+//                session.removeAttribute("postContent");
+//            session.setAttribute("postContent", postVo);
+        }
+
+        if (blogVo != null) {
+            return "blog/main";
+        } else {
+            return "redirect:/";
+        }
+    }
+
     @RequestMapping(value = "/{id}/category/{cateNum}", method = RequestMethod.GET)
     public String openCate(@PathVariable("id") String id, @PathVariable("cateNum") Long cateNum, HttpSession session, Model model) {
         System.out.println("카테고리 오픈 : " + cateNum);
@@ -233,6 +326,9 @@ public class BlogController {
         UserVo userVo = userServiceImpl.getUser(id);
         System.out.println("userVo : " + userVo.toString());
 
+        BlogVo blogVo = blogServiceImpl.getBlog(userVo);
+        model.addAttribute("blogVo", blogVo);
+
         List<CategoryVo> cateList = cateServiceImpl.getList(userVo);
         System.out.println("카테고리 리스트 : " + cateList);
 
@@ -259,10 +355,13 @@ public class BlogController {
     }
 
     @RequestMapping(value = {"/{id}/admin/category"}, method = RequestMethod.POST)
-    public String writeCate(@PathVariable("id") String id, @ModelAttribute CategoryVo cateVo, HttpSession session) {
+    public String writeCate(@PathVariable("id") String id, @ModelAttribute CategoryVo cateVo, Model model) {
         System.out.println("카테고리 작성");
         System.out.println("id: " + id);
         UserVo userVo = userServiceImpl.getUser(id);
+
+        BlogVo blogVo = blogServiceImpl.getBlog(userVo);
+        model.addAttribute("blogVo", blogVo);
 
         System.out.println("받아온 form : " + cateVo);
         cateVo.setUserNo(userVo.getUserNo());
@@ -281,22 +380,39 @@ public class BlogController {
     }
 
     @RequestMapping(value = {"/{id}/admin/write"}, method = RequestMethod.GET)
-    public String blogWrite(@PathVariable("id") String id, HttpSession session) {
+    public String blogWrite(@PathVariable("id") String id, Model model ) {
         System.out.println("글쓰기 화면");
         System.out.println("id: " + id);
         UserVo userVo = userServiceImpl.getUser(id);
         System.out.println("userVo : " + userVo.toString());
 
+        BlogVo blogVo = blogServiceImpl.getBlog(userVo);
+        model.addAttribute("blogVo", blogVo);
+
+        List<CategoryVo> cateList = cateServiceImpl.getList(userVo);
+        System.out.println("카테고리 리스트 : " + cateList);
+
+        model.addAttribute("cateList", cateList);
+
         return "blog/write";
     }
 
     @RequestMapping(value = {"/{id}/admin/write"}, method = RequestMethod.POST)
-    public String blogWriteAction(@PathVariable("id") String id, @ModelAttribute PostVo postVo, HttpSession session) {
+    public String blogWriteAction(@PathVariable("id") String id, @ModelAttribute PostVo postVo, Model model) {
         System.out.println("글쓰기 액션");
         System.out.println("id: " + id);
 
         UserVo userVo = userServiceImpl.getUser(id);
         System.out.println("userVo : " + userVo.toString());
+
+        BlogVo blogVo = blogServiceImpl.getBlog(userVo);
+        model.addAttribute("blogVo", blogVo);
+
+        List<CategoryVo> cateList = cateServiceImpl.getList(userVo);
+        System.out.println("카테고리 리스트 : " + cateList);
+
+        model.addAttribute("cateList", cateList);
+
 
         System.out.println("postVo: " + postVo);
 

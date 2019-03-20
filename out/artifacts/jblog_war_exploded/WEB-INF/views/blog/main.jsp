@@ -23,14 +23,14 @@
 <%--c:set var="postList" scope="session" value="${sessionScope.postList}"/--%>
 <%--<c:set var="postContent" scope="session" value="${sessionScope.postContent}"/>--%>
 
-<div id="container">
+<div id="container" align="center">
     <%--HEADER영역--%>
     <jsp:include page="../includes/header_blog.jsp"/>
     <%--NAVIGATION영역--%>
     <jsp:include page="../includes/navigation.jsp"/>
     <div id="wrapper">
-        <div id="content">
-            <div id="post-content">
+        <div id="content" align="center">
+            <div id="post-content" align="center">
                 <c:choose>
                     <c:when test="${not empty postList}">
                         <%--<c:when test="${not empty postContent}">--%>
@@ -70,9 +70,12 @@
                 </c:choose>
             </div>
 
-            <div id="comment-list">
+            <div id="comment-list" style="width: 300px; border: 1px solid #000; border-radius: 3px">
                 <c:if test="${not empty postContent and not empty commentList}">
                     <table>
+                        <tr>
+                            <td colspan="3" style="text-align: center"><h3>댓글</h3></td>
+                        </tr>
                         <c:forEach items="${commentList}" var="commentVo">
                             <tr>
                                 <td>${commentVo.userName}</td>
@@ -85,8 +88,14 @@
                 </c:if>
             </div>
 
-            <div id="post-list">
+            <br>
+            <br>
+
+            <div id="post-list" style="width: 500px; border: 1px solid #000; border-radius: 3px">
                 <table id="posts">
+                    <tr>
+                        <td colspan="2" style="text-align: center"><h3>글 목록</h3></td>
+                    </tr>
                     <c:choose>
                         <c:when test="${not empty postList}">
                             <%

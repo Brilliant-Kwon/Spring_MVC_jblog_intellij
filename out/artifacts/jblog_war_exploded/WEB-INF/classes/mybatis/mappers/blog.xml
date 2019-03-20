@@ -21,7 +21,7 @@
                                            insert into blog values (
                                            #{userNo},
                                            #{blogTitle},
-                                            null)
+                                            'upload-images/1552890660680.jpg')
 
         ]]>
     </insert>

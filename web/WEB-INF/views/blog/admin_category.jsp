@@ -22,7 +22,7 @@
 <c:set var="authUser" scope="session" value="${sessionScope.authUser}"/>
 <%--<c:set var="cateList" scope="session" value="${sessionScope.cateList}"/>--%>
 <c:set var="postCount" scope="session" value="${sessionScope.postCount}"/>
-<div id="container">
+<div id="container" align="center">
     <%--HEADER영역--%>
     <jsp:include page="../includes/header_blog.jsp"/>
     <jsp:include page="../includes/naviagtion_admin.jsp"/>

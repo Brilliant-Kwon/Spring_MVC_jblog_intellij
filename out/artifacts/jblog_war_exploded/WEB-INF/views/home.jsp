@@ -29,7 +29,7 @@
             <div id="site-introduction">
                 <form action="${pageContext.servletContext.contextPath }/main" method="post">
                     <input type="text" style="width: 500px" name="search_input">
-                    <input type="submit" value="전송">
+                    <input type="submit" value="검색">
                     <br>
                     <input type="radio" name="search_choose" value="blogtitle" checked="checked">블로그 제목
                     <input type="radio" name="search_choose" value="bloguser">블로거

@@ -7,67 +7,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09f54e64-2e8b-44d7-90fc-995f049ae3bc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/jblog/repository/CommentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jblog/repository/CommentDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jblog/service/CommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jblog/service/CommentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/jblog/controller/BlogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/jblog/controller/BlogController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/jblog/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/jblog/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/jblog/repository/CateDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/jblog/repository/CateDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/jblog/repository/CateDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/jblog/repository/CateDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/jblog/repository/PostDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/jblog/repository/PostDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/jblog/repository/PostDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/jblog/repository/PostDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/jblog/service/CateService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/jblog/service/CateService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/jblog/service/CateServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/jblog/service/CateServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/jblog/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/jblog/service/PostService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/jblog/service/PostServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/jblog/service/PostServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/jblog/vo/CommentVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/jblog/vo/CommentVo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/mybatis/mappers/cate.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/mybatis/mappers/cate.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/mybatis/mappers/comment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/mybatis/mappers/comment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/mybatis/mappers/post.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/mybatis/mappers/post.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/mybatis/mappers/blog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/classes/mybatis/mappers/blog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/views/blog/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/views/blog/admin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/views/blog/admin_category.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/views/blog/admin_category.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/views/blog/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/views/blog/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/views/blog/post_list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/views/blog/write.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/views/blog/write.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/views/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/views/includes/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/views/includes/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/views/includes/navigation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/views/includes/navigation.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/views/users/joinform.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/views/users/joinform.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/views/users/loginform.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/WEB-INF/views/users/loginform.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/css/header_footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jblog_war_exploded/css/header_footer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jblog/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jblog/controller/BlogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jblog/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jblog/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jblog/repository/CateDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jblog/repository/CateDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jblog/repository/CateDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jblog/repository/CateDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jblog/repository/PostDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jblog/repository/PostDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jblog/repository/PostDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jblog/repository/PostDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jblog/repository/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jblog/repository/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jblog/service/CateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jblog/service/CateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jblog/service/CateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jblog/service/CateServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jblog/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jblog/service/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jblog/service/PostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jblog/service/PostServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jblog/vo/CommentVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jblog/vo/CommentVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mappers/cate.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mappers/cate.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mappers/comment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mappers/comment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mappers/post.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mappers/post.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jblog/controller/BlogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jblog/controller/BlogController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jblog/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jblog/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jblog/repository/CateDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jblog/repository/CateDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jblog/repository/CateDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jblog/repository/CateDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jblog/repository/PostDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jblog/repository/PostDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jblog/repository/PostDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jblog/repository/PostDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jblog/service/CateService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jblog/service/CateService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jblog/service/CateServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jblog/service/CateServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jblog/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jblog/service/PostService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jblog/service/PostServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jblog/service/PostServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jblog/vo/CommentVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jblog/vo/CommentVo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mappers/cate.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mappers/cate.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mappers/comment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mappers/comment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mappers/post.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mappers/post.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mappers/blog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mappers/blog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mappers/blog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mappers/blog.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/blog/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/blog/admin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/blog/admin_category.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/blog/admin_category.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/blog/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/blog/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/blog/post_list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/blog/write.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/blog/write.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/includes/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/includes/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/includes/header_blog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/includes/header_blog.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/includes/naviagtion_admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/includes/naviagtion_admin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/includes/navigation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/includes/navigation.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/users/joinform.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/users/joinform.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/users/loginform.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/users/loginform.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/header_footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/header_footer.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -94,105 +60,52 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jblog/vo/CommentVo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding>
-                <element signature="e#1087#1088#0" expanded="true" />
-                <element signature="e#1116#1117#0" expanded="true" />
-                <element signature="e#1158#1159#0" expanded="true" />
-                <element signature="e#1194#1195#0" expanded="true" />
-                <element signature="e#1568#1569#0" expanded="true" />
-                <element signature="e#1599#1600#0" expanded="true" />
-                <element signature="e#1647#1648#0" expanded="true" />
-                <element signature="e#1687#1688#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jblog/repository/CommentDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="21" column="78" selection-start-line="21" selection-start-column="78" selection-end-line="21" selection-end-column="78" />
-              <folding>
-                <element signature="e#180#181#0" expanded="true" />
-                <element signature="e#204#205#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jblog/service/CommentServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="16" column="45" lean-forward="true" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
-              <folding>
-                <element signature="e#190#191#0" expanded="true" />
-                <element signature="e#218#219#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jblog/repository/UserDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="36" column="58" lean-forward="true" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#878#879#0" expanded="true" />
-                <element signature="e#940#941#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mappers/comment.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="7" column="123" lean-forward="true" selection-start-line="7" selection-start-column="123" selection-end-line="7" selection-end-column="123" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/includes/navigation.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="23" column="52" lean-forward="true" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/includes/naviagtion_admin.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/blog/admin.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-108">
-              <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+            <state relative-caret-position="216">
+              <caret line="18" column="54" lean-forward="true" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/blog/main.jsp">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/includes/header_blog.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="97" column="100" selection-start-line="97" selection-start-column="100" selection-end-line="97" selection-end-column="100" />
+            <state relative-caret-position="257">
+              <caret line="15" column="116" selection-start-line="15" selection-start-column="116" selection-end-line="15" selection-end-column="116" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#h1#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/includes/header.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="14" column="81" lean-forward="true" selection-start-line="14" selection-start-column="81" selection-end-line="14" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/header_footer.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="696">
+              <caret line="29" column="18" lean-forward="true" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -200,10 +113,75 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/jblog/controller/BlogController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="203" column="14" lean-forward="true" selection-start-line="203" selection-start-column="14" selection-end-line="203" selection-end-column="14" />
+            <state relative-caret-position="11009">
+              <caret line="473" column="43" lean-forward="true" selection-start-line="473" selection-start-column="43" selection-end-line="473" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/blog/write.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="27" column="86" lean-forward="true" selection-start-line="27" selection-start-column="86" selection-end-line="27" selection-end-column="86" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#td#1;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/blog/admin.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="696">
+              <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/blog/main.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+              <folding>
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#3;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/includes/naviagtion_admin.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="545">
+              <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+              <folding>
+                <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/users/loginform.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="768">
+              <caret line="41" column="56" lean-forward="true" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
+              <folding>
+                <element signature="n#style#0;n#strong#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -234,6 +212,7 @@
       <find>postVo</find>
       <find>cateList</find>
       <find>whole</find>
+      <find>4F4F4F</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -248,27 +227,17 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/views/exception/exception.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/jblog/service/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/users/joinsuccess.jsp" />
-        <option value="$PROJECT_DIR$/web/css/header_footer.css" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/users/loginform.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/jblog/service/BlogService.java" />
         <option value="$PROJECT_DIR$/src/main/java/jblog/service/BlogServiceImpl.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/main/java/jblog/repository/BlogDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/jblog/controller/UsersController.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/users/joinform.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/jblog/controller/CateController.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/home.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/configuration.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/includes/header_blog.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/includes/naviagtion_admin.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/jblog/service/FileUploadService.java" />
         <option value="$PROJECT_DIR$/src/main/java/jblog/repository/BlogDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mappers/blog.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/blog/write.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/blog/post_list.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/jblog/controller/MainController.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/includes/header.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/blog/admin_category.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/jblog/repository/PostDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/jblog/repository/PostDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/mappers/post.xml" />
@@ -281,7 +250,6 @@
         <option value="$PROJECT_DIR$/src/main/java/jblog/service/CateServiceImpl.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/includes/navigation.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/jblog/repository/CommentDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/jblog/service/CommentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/jblog/vo/CommentVo.java" />
@@ -290,9 +258,20 @@
         <option value="$PROJECT_DIR$/src/main/java/jblog/service/CommentServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/jblog/repository/CommentDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/mappers/comment.xml" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/users/joinform.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/home.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/includes/header.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mappers/blog.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/blog/admin.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/blog/admin_category.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/includes/naviagtion_admin.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/users/loginform.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/jblog/controller/BlogController.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/blog/write.jsp" />
+        <option value="$PROJECT_DIR$/web/css/header_footer.css" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/blog/main.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/includes/navigation.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/includes/header_blog.jsp" />
       </list>
     </option>
   </component>
@@ -502,7 +481,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552988259248" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553042529392" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -686,12 +665,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552524007612</updated>
-      <workItem from="1552524012859" duration="102056000" />
+      <workItem from="1552524012859" duration="107505000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102056000" />
+    <option name="totallyTimeSpent" value="107505000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -720,7 +699,7 @@
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="CheckStyle" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32695138" />
+      <window_info anchor="bottom" id="Messages" weight="0.32589287" />
       <window_info anchor="bottom" id="Tail" />
       <window_info anchor="bottom" id="Java Enterprise" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -788,39 +767,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/jblog/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mappers/users.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jblog/service/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/header_footer.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-278">
-          <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/includes/footer.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -832,13 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -894,51 +833,10 @@
         <state relative-caret-position="-288" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/includes/header_blog.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/blog/write.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="46" column="76" selection-start-line="46" selection-start-column="76" selection-end-line="46" selection-end-column="76" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/blog/post_list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jblog/controller/UsersController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
           <caret line="177" column="5" lean-forward="true" selection-start-line="177" selection-start-column="5" selection-end-line="177" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/includes/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/blog/admin_category.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -963,13 +861,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/users/joinform.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="105" column="38" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -1081,13 +972,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="31" column="84" lean-forward="true" selection-start-line="31" selection-start-column="84" selection-end-line="31" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jblog/repository/CommentDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1129,13 +1013,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mappers/blog.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="31" column="3" lean-forward="true" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mappers/cate.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1152,13 +1029,6 @@
             <element signature="e#878#879#0" expanded="true" />
             <element signature="e#940#941#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/includes/naviagtion_admin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1199,7 +1069,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jblog/service/CommentServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
+        <state relative-caret-position="30">
           <caret line="16" column="45" lean-forward="true" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
           <folding>
             <element signature="e#190#191#0" expanded="true" />
@@ -1208,34 +1078,166 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jblog/controller/BlogController.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="203" column="14" lean-forward="true" selection-start-line="203" selection-start-column="14" selection-end-line="203" selection-end-column="14" />
+        <state relative-caret-position="330">
+          <caret line="28" column="74" lean-forward="true" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/resources/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mappers/blog.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="23" column="64" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/blog/post_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/users/joinform.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="38" column="46" lean-forward="true" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#style#0;n#input#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/blog/admin_category.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/users/loginform.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="41" column="56" lean-forward="true" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
+          <folding>
+            <element signature="n#style#0;n#strong#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/blog/write.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="27" column="86" lean-forward="true" selection-start-line="27" selection-start-column="86" selection-end-line="27" selection-end-column="86" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#td#1;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/blog/admin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/blog/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#3;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/includes/naviagtion_admin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/includes/navigation.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="23" column="52" lean-forward="true" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+        <state relative-caret-position="216">
+          <caret line="18" column="54" lean-forward="true" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/blog/admin.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jblog/controller/BlogController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-108">
-          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        <state relative-caret-position="11009">
+          <caret line="473" column="43" lean-forward="true" selection-start-line="473" selection-start-column="43" selection-end-line="473" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/blog/main.jsp">
+    <entry file="file://$PROJECT_DIR$/web/css/header_footer.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="97" column="100" selection-start-line="97" selection-start-column="100" selection-end-line="97" selection-end-column="100" />
+        <state relative-caret-position="696">
+          <caret line="29" column="18" lean-forward="true" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/includes/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="81" lean-forward="true" selection-start-line="14" selection-start-column="81" selection-end-line="14" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/includes/header_blog.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="15" column="116" selection-start-line="15" selection-start-column="116" selection-end-line="15" selection-end-column="116" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#h1#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

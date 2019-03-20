@@ -10,8 +10,17 @@
 <c:set var="authUser" scope="session" value="${sessionScope.authUser}"/>
 <div id="navigation_admin">
     <ul >
-        <li style="display: inline"><a href="<%= request.getContextPath() %>/${authUser.id}/admin/basic">기본설정</a></li>
-        <li style="display: inline"><a href="<%= request.getContextPath() %>/${authUser.id}/admin/category">카테고리</a></li>
-        <li style="display: inline"><a href="<%= request.getContextPath() %>/${authUser.id}/admin/write">글 작성</a></li>
+        <li style="display: inline"><a style="color: #3b7dbf;
+    font-weight: bold;
+    margin-left: 10px;
+    text-decoration: none;" href="<%= request.getContextPath() %>/${authUser.id}/admin/basic">기본설정</a></li>
+        <li style="display: inline"><a style="color: #3b7dbf;
+    font-weight: bold;
+    margin-left: 10px;
+    text-decoration: none;" href="<%= request.getContextPath() %>/${authUser.id}/admin/category">카테고리</a></li>
+        <li style="display: inline"><a style="color: #3b7dbf;
+    font-weight: bold;
+    margin-left: 10px;
+    text-decoration: none;" href="<%= request.getContextPath() %>/${authUser.id}/admin/write">글 작성</a></li>
     </ul>
 </div>

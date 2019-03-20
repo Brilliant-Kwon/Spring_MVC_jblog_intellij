@@ -16,8 +16,8 @@
 </head>
 <body>
 <c:set var="authUser" scope="session" value="${sessionScope.authUser}"/>
-<c:set var="cateList" scope="session" value="${sessionScope.cateList}"/>
-<div id="container">
+<%--<c:set var="cateList" scope="session" value="${sessionScope.cateList}"/>--%>
+<div id="container" align="center">
     <%--HEADER영역--%>
     <jsp:include page="../includes/header_blog.jsp"/>
     <jsp:include page="../includes/naviagtion_admin.jsp"/>
@@ -29,7 +29,7 @@
                 <table>
                     <tr>
                         <td class="label">제목</td>
-                        <td><input type="text" name="postTitle" value=""></td>
+                        <td><input style="width: 200px" type="text" name="postTitle" value=""></td>
                         <td><select name="cateNo">
                             <c:forEach items="${cateList}" var="cateVo">
                                 <option value="${cateVo.cateNo}">${cateVo.cateName}</option>
@@ -38,8 +38,8 @@
                     </tr>
                     <tr>
                         <td class="label">내용</td>
-                        <td>
-                            <textarea id="contentarea" name="postContent"></textarea>
+                        <td colspan="2">
+                            <textarea id="contentarea" name="postContent" style="width: 300px; height: 400px"></textarea>
                         </td>
                     </tr>
                 </table>

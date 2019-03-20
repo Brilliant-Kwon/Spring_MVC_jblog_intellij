@@ -25,7 +25,7 @@
     <%--<jsp:include page="includes/navigation.jsp"/>--%>
     <div id="wrapper">
         <div id="content">
-            <div id="user">
+            <div id="user" align="center" style="border: 1px solid #000; border-radius: 10px">
                 <%--Login form--%>
                 <%--<form id="Login-form" name="Loginform" method="post"--%>
                 <%--action="<%=request.getContextPath()%>/users/login">--%>
@@ -37,7 +37,7 @@
                     <form:input path="id"/>
                     <label class="block-label" for="password">비밀번호</label>
                     <%--<input type="password" name="password">--%>
-                    <form:input path="password"/>
+                    <input type="password" name="password">
 
                     <spring:hasBindErrors name="userVo">
                         <c:if test="${errors.hasFieldErrors('id') } || ${errors.hasFieldErrors('password') }">

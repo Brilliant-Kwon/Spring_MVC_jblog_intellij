@@ -7,8 +7,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<div id="header" align="center">
-    <a href="${pageContext.servletContext.contextPath }/main"><img height="200px" src="http://cslin.skuniv.ac.kr/~kwonchk1004/images/logo.png" ></a>
+<div id="header" align="center"  style="margin: 0 auto">
+    <a href="${pageContext.servletContext.contextPath }/main"><img height="200px" src="<%= request.getContextPath()%>/upload-images/logo.png"></a>
     <ul>
         <%--로그인 된 경우의 메뉴--%>
         <%--

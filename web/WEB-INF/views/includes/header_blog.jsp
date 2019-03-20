@@ -10,7 +10,10 @@
 <c:set var="blogVo" scope="session" value="${sessionScope.blogVo}"/>
 <c:set var="authUser" scope="session" value="${sessionScope.authUser}"/>
 <div id="header_blog" align="center">
-    <h1>${blogVo.blogTitle}</h1>
+    <h1><a style="color: #f3f3f3;
+    font-weight: bold;
+    margin-left: 10px;
+    text-decoration: none;" href="${pageContext.servletContext.contextPath }/${authUser.id}">${blogVo.blogTitle}</a></h1>
     <ul>
         <%--로그인 된 경우의 메뉴--%>
         <%--
@@ -21,19 +24,35 @@
         <c:choose>
             <c:when test="${authUser.userNo eq blogVo.userNo}">
                 <%--<c:otherwise>--%>
-                <li><a href="${pageContext.servletContext.contextPath }/${authUser.id}/admin/basic">내블로그 관리</a></li>
-                <li><a href="${pageContext.servletContext.contextPath }/users/logout">로그아웃</a></li>
+                <li><a style="color: #bfbe3b;
+    font-weight: bold;
+    margin-left: 10px;
+    text-decoration: none;" href="${pageContext.servletContext.contextPath }/${authUser.id}/admin/basic">내블로그 관리</a>
+                </li>
+                <li><a style="color: #bfbe3b;
+    font-weight: bold;
+    margin-left: 10px;
+    text-decoration: none;" href="${pageContext.servletContext.contextPath }/users/logout">로그아웃</a></li>
                 <%--</c:otherwise>--%>
             </c:when>
 
             <c:when test="${authUser.userNo ne blogVo.userNo && authUser ne null}">
-                <li><a href="${pageContext.servletContext.contextPath }/users/logout">로그아웃</a></li>
+                <li><a style="color: #bfbe3b;
+    font-weight: bold;
+    margin-left: 10px;
+    text-decoration: none;" href="${pageContext.servletContext.contextPath }/users/logout">로그아웃</a></li>
             </c:when>
 
             <c:when test="${empty authUser || authUser eq null}">
                 <%--로그인 안 된 경우의 메뉴--%>
-                <li><a href="${pageContext.servletContext.contextPath }/users/join">회원가입</a></li>
-                <li><a href="${pageContext.servletContext.contextPath }/users/login">로그인</a></li>
+                <li><a style="color: #bfbe3b;
+    font-weight: bold;
+    margin-left: 10px;
+    text-decoration: none;" href="${pageContext.servletContext.contextPath }/users/join">회원가입</a></li>
+                <li><a style="color: #bfbe3b;
+    font-weight: bold;
+    margin-left: 10px;
+    text-decoration: none;" href="${pageContext.servletContext.contextPath }/users/login">로그인</a></li>
             </c:when>
         </c:choose>
     </ul>

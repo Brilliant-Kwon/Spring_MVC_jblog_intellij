@@ -87,7 +87,7 @@
     <%--<jsp:include page="includes/navigation.jsp"/>--%>
     <div id="wrapper" align="center">
         <div id="content" align="left" >
-            <div id="user">
+            <div id="user" >
             <form:form modelAttribute="userVo" method="post"
                        action="${pageContext.servletContext.contextPath}/users/join" onsubmit="checked(this)">
 
@@ -125,7 +125,7 @@
                     <input type="checkbox" name="check">서비스 약관에 동의합니다.
                 </fieldset>
 
-                <input type="submit" value="회원가입">
+                <input type="submit" value="회원가입" style="margin: 10px 0">
 
             </form:form>
             </div>
