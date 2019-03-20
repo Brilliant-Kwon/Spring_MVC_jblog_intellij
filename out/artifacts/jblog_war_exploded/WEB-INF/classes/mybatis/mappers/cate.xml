@@ -20,4 +20,10 @@
 ]]>
     </select>
 
+    <delete id="delete" parameterType="Long">
+        <![CDATA[
+        delete from category where cateNo = #{cateNo}
+]]>
+    </delete>
+
 </mapper>

@@ -94,7 +94,7 @@ public class BlogController {
             if (!commList.isEmpty()) {
                 System.out.println("댓글 목록 : " + commList);
                 model.addAttribute("commentList", commList);
-            }else{
+            } else {
                 System.out.println("댓글 없음");
             }
 //            if (session.getAttribute("postContent") != null)
@@ -187,7 +187,7 @@ public class BlogController {
             if (!commList.isEmpty()) {
                 System.out.println("댓글 목록 : " + commList);
                 model.addAttribute("commentList", commList);
-            }else{
+            } else {
                 System.out.println("댓글 없음");
             }
 //            if (session.getAttribute("postContent") != null)
@@ -248,7 +248,7 @@ public class BlogController {
             if (!commList.isEmpty()) {
                 System.out.println("댓글 목록 : " + commList);
                 model.addAttribute("commentList", commList);
-            }else{
+            } else {
                 System.out.println("댓글 없음");
             }
 //            if (session.getAttribute("postContent") != null)
@@ -289,12 +289,12 @@ public class BlogController {
         PostVo postVo = postServiceImpl.getPost(postNum);
         model.addAttribute("postContent", postVo);
 
-        System.out.println("포스트 번호 : "+postVo.getPostNo());
+        System.out.println("포스트 번호 : " + postVo.getPostNo());
         List<CommentVo> commList = commentServiceImpl.getComments(postVo.getPostNo());
         if (!commList.isEmpty()) {
             System.out.println("댓글 목록 : " + commList);
             model.addAttribute("commentList", commList);
-        }else{
+        } else {
             System.out.println("댓글 없음");
         }
 
@@ -379,8 +379,21 @@ public class BlogController {
 
     }
 
+    @RequestMapping(value = "/{id}/admin/delete/{cateNo}")
+    public String cateDelete(@PathVariable("id") String id, @PathVariable("cateNo") Long cateNo) {
+        System.out.println("카테고리 삭제 컨트롤러");
+
+        boolean success = cateServiceImpl.deleteCate(cateNo);
+        if (success) {
+            System.out.println("카테고리 삭제 성공");
+        } else {
+            System.out.println("카테고리 삭제 실패");
+        }
+        return "redirect:/" + id + "/admin/category";
+    }
+
     @RequestMapping(value = {"/{id}/admin/write"}, method = RequestMethod.GET)
-    public String blogWrite(@PathVariable("id") String id, Model model ) {
+    public String blogWrite(@PathVariable("id") String id, Model model) {
         System.out.println("글쓰기 화면");
         System.out.println("id: " + id);
         UserVo userVo = userServiceImpl.getUser(id);
@@ -465,7 +478,7 @@ public class BlogController {
     public String CommentWrite(@PathVariable("id") String id, @PathVariable("postNo") Long postNo, @PathVariable("authNo") Long authNo, @ModelAttribute CommentVo commentVo) {
         System.out.println("댓글 작성");
 
-        System.out.println("댓글 vo: "+ commentVo);
+        System.out.println("댓글 vo: " + commentVo);
         boolean success = commentServiceImpl.create(commentVo);
 
         if (success) {
@@ -474,7 +487,7 @@ public class BlogController {
             System.out.println("댓글 작성 실패");
         }
 
-        return "redirect:/"+id+"/post/"+postNo;
+        return "redirect:/" + id + "/post/" + postNo;
     }
 
 

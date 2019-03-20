@@ -11,4 +11,6 @@ public interface CateService {
     public List<CategoryVo> getList(UserVo vo);
 
     public CategoryVo getbyNo(Long cateNo);
+
+    public boolean deleteCate(Long cateNo);
 }

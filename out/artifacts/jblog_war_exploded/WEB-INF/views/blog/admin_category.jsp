@@ -60,7 +60,7 @@
                         <td><%=pCount.get(caNo)%>
                         </td>
                         <td>${cateVo.description}</td>
-                        <td><a href="">삭제</a></td>
+                        <td><a href="${pageContext.servletContext.contextPath }/${authUser.id}/admin/delete/${cateVo.cateNo}">삭제</a></td>
                     </tr>
                 </c:forEach>
             </table>

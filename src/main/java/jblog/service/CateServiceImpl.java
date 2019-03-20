@@ -27,4 +27,9 @@ public class CateServiceImpl implements CateService {
     public CategoryVo getbyNo(Long cateNo) {
         return cateDaoImpl.selectbyNo(cateNo);
     }
+
+    @Override
+    public boolean deleteCate(Long cateNo) {
+        return cateDaoImpl.delete(cateNo) == 1;
+    }
 }

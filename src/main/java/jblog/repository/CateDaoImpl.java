@@ -27,4 +27,9 @@ public class CateDaoImpl implements CateDao {
     public CategoryVo selectbyNo(Long CateNo) {
         return sqlSession.selectOne("cate.selectbyNo",CateNo);
     }
+
+    @Override
+    public int delete(Long cateNo) {
+        return sqlSession.delete("cate.delete", cateNo);
+    }
 }
